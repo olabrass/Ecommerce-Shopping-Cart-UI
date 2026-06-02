@@ -59,6 +59,207 @@
       "category": "Adapters",
       "rating": 4.1,
       "image": "images/product-6.png"
+    },
+
+    {
+      "id": 7,
+      "name": "Wireless Earbuds",
+      "description": "Compact earbuds with noise isolation and deep bass.",
+      "price": 49.99,
+      "quantity": 60,
+      "category": "Audio",
+      "rating": 4.4,
+      "image": "images/product-1.png"
+    },
+    {
+      "id": 8,
+      "name": "Smart Fitness Band",
+      "description": "Track steps, calories, and sleep quality in real time.",
+      "price": 34.99,
+      "quantity": 80,
+      "category": "Wearables",
+      "rating": 4.3,
+      "image": "images/product-3.png"
+    },
+    {
+      "id": 9,
+      "name": "RGB Gaming Mouse Pad",
+      "description": "Large mouse pad with RGB lighting edges.",
+      "price": 19.99,
+      "quantity": 120,
+      "category": "Accessories",
+      "rating": 4.2,
+      "image": "images/product-4.png"
+    },
+    {
+      "id": 10,
+      "name": "Bluetooth Soundbar",
+      "description": "Cinematic sound experience for your home setup.",
+      "price": 79.99,
+      "quantity": 35,
+      "category": "Audio",
+      "rating": 4.6,
+      "image": "images/product-2.png"
+    },
+    {
+      "id": 11,
+      "name": "Laptop Stand",
+      "description": "Ergonomic adjustable stand for better posture.",
+      "price": 22.99,
+      "quantity": 90,
+      "category": "Accessories",
+      "rating": 4.5,
+      "image": "images/product-6.png"
+    },
+    {
+      "id": 12,
+      "name": "Wireless Charger",
+      "description": "Fast charging pad for all Qi-enabled devices.",
+      "price": 29.99,
+      "quantity": 70,
+      "category": "Accessories",
+      "rating": 4.3,
+      "image": "images/product-6.png"
+    },
+    {
+      "id": 13,
+      "name": "Smartphone Gimbal",
+      "description": "Stabilize your videos with 3-axis control.",
+      "price": 119.99,
+      "quantity": 20,
+      "category": "Photography",
+      "rating": 4.7,
+      "image": "images/product-5.png"
+    },
+    {
+      "id": 14,
+      "name": "Action Camera",
+      "description": "4K waterproof action camera for adventure shots.",
+      "price": 149.99,
+      "quantity": 18,
+      "category": "Photography",
+      "rating": 4.6,
+      "image": "images/product-3.png"
+    },
+    {
+      "id": 15,
+      "name": "VR Headset",
+      "description": "Immersive virtual reality experience with HD display.",
+      "price": 199.99,
+      "quantity": 12,
+      "category": "Gaming",
+      "rating": 4.8,
+      "image": "images/product-1.png"
+    },
+    {
+      "id": 16,
+      "name": "Gaming Controller",
+      "description": "Wireless controller with vibration feedback.",
+      "price": 49.99,
+      "quantity": 55,
+      "category": "Gaming",
+      "rating": 4.4,
+      "image": "images/product-4.png"
+    },
+    {
+      "id": 17,
+      "name": "Portable SSD",
+      "description": "High-speed external storage for files and games.",
+      "price": 89.99,
+      "quantity": 40,
+      "category": "Storage",
+      "rating": 4.7,
+      "image": "images/product-6.png"
+    },
+    {
+      "id": 18,
+      "name": "Wireless Keyboard Combo",
+      "description": "Keyboard and mouse combo with long battery life.",
+      "price": 59.99,
+      "quantity": 65,
+      "category": "Accessories",
+      "rating": 4.3,
+      "image": "images/product-5.png"
+    },
+    {
+      "id": 19,
+      "name": "Noise Cancelling Earphones",
+      "description": "Block outside noise for focused listening.",
+      "price": 39.99,
+      "quantity": 75,
+      "category": "Audio",
+      "rating": 4.2,
+      "image": "images/product-2.png"
+    },
+    {
+      "id": 20,
+      "name": "Smart LED Light Strip",
+      "description": "RGB lighting controlled via mobile app.",
+      "price": 24.99,
+      "quantity": 100,
+      "category": "Smart Home",
+      "rating": 4.5,
+      "image": "images/product-1.png"
+    },
+    {
+      "id": 21,
+      "name": "Mini Projector",
+      "description": "Portable projector for movies and presentations.",
+      "price": 129.99,
+      "quantity": 25,
+      "category": "Electronics",
+      "rating": 4.6,
+      "image": "images/product-3.png"
+    },
+    {
+      "id": 22,
+      "name": "Smart Door Lock",
+      "description": "Keyless entry system with fingerprint access.",
+      "price": 159.99,
+      "quantity": 10,
+      "category": "Smart Home",
+      "rating": 4.7,
+      "image": "images/product-6.png"
+    },
+    {
+      "id": 23,
+      "name": "Streaming Microphone",
+      "description": "Professional mic for podcasts and streaming.",
+      "price": 69.99,
+      "quantity": 45,
+      "category": "Audio",
+      "rating": 4.5,
+      "image": "images/product-5.png"
+    },
+    {
+      "id": 24,
+      "name": "Phone Cooling Fan",
+      "description": "Prevents overheating during gaming sessions.",
+      "price": 14.99,
+      "quantity": 150,
+      "category": "Accessories",
+      "rating": 4.1,
+      "image": "images/product-4.png"
+    },
+    {
+      "id": 25,
+      "name": "Wireless Presentation Clicker",
+      "description": "Control slides remotely with laser pointer.",
+      "price": 19.99,
+      "quantity": 85,
+      "category": "Accessories",
+      "rating": 4.2,
+      "image": "images/product-6.png"
+    },
+    {
+      "id": 26,
+      "name": "Smart Thermostat",
+      "description": "Control home temperature from your phone.",
+      "price": 129.99,
+      "quantity": 20,
+      "category": "Smart Home",
+      "rating": 4.6,
+      "image": "images/product-2.png"
     }
   ]
 }

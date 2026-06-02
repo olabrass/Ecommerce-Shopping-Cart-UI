@@ -4,7 +4,7 @@ import { useProducts } from "../context/ProductContext";
 const ProductList = () => {
     const {products, loading, error} = useProducts();
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 px-6 md:px-12 lg:px-20">
 
         {loading && <p>Loading...</p>}
         {error && <div className="error"> {error} </div>}
