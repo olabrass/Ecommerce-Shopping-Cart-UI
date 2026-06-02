@@ -6,8 +6,9 @@ const Header = () => {
 
     const [showDropdown, setShowDropdown] = useState(false);
 
-    const {cart} = useCart();
+    const {cart, removeFromCart, clearCart} = useCart();
     const itemCount = cart.reduce((acc, item) => acc + item.qty, 0);
+    const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0).toFixed(2);
 
     return (
         <>
@@ -32,11 +33,74 @@ const Header = () => {
         )}
         </button>
         {showDropdown && (
-            <div className="absolute right-0 mt-2 w-80 bg-white border rounded shadow-lg z-50">
+            <div className="absolute right-0 mt-2 w-120 bg-white border rounded shadow-lg z-50 px-2">
                 <div className="p-4">
                     <h2 className="font-semibold text-lg mb-2">
                         Cart Items
                     </h2>
+                    {cart.length === 0 ? (
+                        <p className="text-gray-500 text-sm">Your Cart is Empty</p>
+                    ) : (<> 
+                  <ul className="max-h-80 overflow-y-auto space-y-3 pr-2">
+  {cart.map((item) => (
+    <li
+      key={item.id}
+      className="group flex items-center justify-between rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+    >
+      {/* Product Info */}
+      <div className="flex items-center gap-4">
+        {/* Product Avatar */}
+        <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-lg font-bold text-white">
+            <img
+      src={item.image}
+      alt={item.name}
+      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+    />
+        </div>
+
+        <div>
+          <h3 className="font-semibold text-gray-800">
+            {item.name}
+          </h3>
+
+          <div className="mt-1 flex items-center gap-2">
+            <span className="rounded-full bg-indigo-100 px-2 py-1 text-xs font-medium text-indigo-700">
+              Qty: {item.qty}
+            </span>
+
+            <span className="text-sm text-gray-500">
+              ${item.price} each
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Price & Action */}
+      <div className="flex flex-col items-end gap-2">
+        <p className="text-lg font-bold text-gray-900">
+          ${(item.qty * item.price).toFixed(2)}
+        </p>
+
+        <button
+          onClick={() => removeFromCart(item.id)}
+          className="rounded-lg bg-red-50 px-3 py-1.5 text-sm font-medium text-red-600 transition-all hover:bg-red-500 hover:text-white"
+        >
+          Remove
+        </button>
+      </div>
+    </li>
+  ))}
+</ul>
+        <div className="mt-4 flex justify-between font-semibold p-4">
+            <span>Total:</span>
+            <span>${total}</span>
+        </div>
+        <button onClick={clearCart} className="mt-3 w-full bg-red-500 text-white py-1 rounded transition hover:bg-red-600">
+        Clear Cart
+        </button>
+
+
+                     </>)}
                 </div>
             </div>
         )}

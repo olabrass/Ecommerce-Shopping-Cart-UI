@@ -1,9 +1,17 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
 
 export function CartProvider({children}){
-    const [cart, setCart] = useState([]);
+    const [cart, setCart] = useState(() => {
+        const storedProducts = localStorage.getItem('cart');
+        return storedProducts ? JSON.parse(storedProducts) : [];
+    });
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart]);
+
 
     const AddToCart = (product) => {
         setCart((prev) => {
@@ -16,13 +24,20 @@ export function CartProvider({children}){
         })
     }
 
+const removeFromCart = (id) => {
+    setCart((prev) => prev.filter((item) => item.id !== id))
+}
+
+const clearCart = () => setCart([]);
+
     return(
-        <CartContext.Provider value={{ cart, AddToCart }}>
+        <CartContext.Provider value={{ cart, AddToCart, removeFromCart, clearCart }}>
             {children}
         </CartContext.Provider>
     )
 }
 
+// Custom Hook
 export function useCart(){
     return useContext(CartContext);
 }
