@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { FaShoppingCart, FaStore } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
+import SubHeader from "./SubHeader";
 
 const Header = () => {
 
     const [showDropdown, setShowDropdown] = useState(false);
-
     const {cart, removeFromCart, clearCart} = useCart();
     const itemCount = cart.reduce((acc, item) => acc + item.qty, 0);
     const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0).toFixed(2);
@@ -107,43 +107,7 @@ const Header = () => {
     </div>
 
 </header>
-
-<div className="mx-auto max-w-7xl px-16 py-10">
-  {/* Badge */}
-  <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-700">
-    Built with React + JSON Server
-  </div>
-
-  {/* Main Title */}
-  <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-    Product Catalogue
-  </h1>
-
-  {/* Subtitle */}
-  <p className="mt-4 max-w-2xl text-lg leading-relaxed text-gray-600">
-    A modern e-commerce product listing built with React, powered by a mock REST API using JSON Server.
-    Clean UI, responsive design, and scalable architecture.
-  </p>
-
-  {/* Optional Stats / Meta */}
-  <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-gray-500">
-    <span className="rounded-lg bg-gray-100 px-3 py-1">
-      ⚛️ React Frontend
-    </span>
-    <span className="rounded-lg bg-gray-100 px-3 py-1">
-      🗄️ JSON Server API
-    </span>
-    <span className="rounded-lg bg-gray-100 px-3 py-1">
-      🛒 E-commerce UI
-    </span>
-    <span className="rounded-lg bg-gray-100 px-3 py-1">
-      📱 Fully Responsive
-    </span>
-  </div>
-
-  {/* Divider */}
-  <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
-</div>
+<SubHeader />
         </>
     )
 }
