@@ -5,8 +5,8 @@ import SubHeader from "./SubHeader";
 
 const Header = () => {
 
+  const {cart, removeFromCart, clearCart} = useCart();
     const [showDropdown, setShowDropdown] = useState(false);
-    const {cart, removeFromCart, clearCart} = useCart();
     const itemCount = cart.reduce((acc, item) => acc + item.qty, 0);
     const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0).toFixed(2);
 

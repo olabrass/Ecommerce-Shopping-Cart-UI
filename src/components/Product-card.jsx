@@ -3,7 +3,7 @@ import { useCart } from "../context/CartContext";
 import { FaShoppingCart } from "react-icons/fa";
 
 const ProductCard = ({product}) => {
-    const {AddToCart} = useCart();
+const {AddToCart} = useCart();
 return (
 <div className="group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
 

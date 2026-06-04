@@ -1,3 +1,5 @@
+import CategoryFilter from "./CategoryFilter";
+import SearchBar from "./SearchBar";
 
 const SubHeader = () => {
 
@@ -35,8 +37,23 @@ const SubHeader = () => {
     <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
   </div>
 
-  {/* RIGHT SIDE (FILTER PANEL) */}
+  {/* SEARCH AND FILTER */}
+    
+</div>
+ <div className="mx-auto flex max-w-6xl flex-col mb-5 gap-4 rounded-2xl border border-gray-200 bg-white px-1 py-5 shadow-sm md:flex-row md:items-center lg:px-20">
 
+  {/* Search */}
+  <div className="flex-1">
+    <SearchBar />
+  </div>
+
+  {/* Divider (desktop only) */}
+  <div className="hidden h-10 w-px bg-gray-200 md:block"></div>
+
+  {/* Category */}
+  <div className="w-full md:w-64">
+    <CategoryFilter />
+  </div>
 
 </div>
         </>
